@@ -5,6 +5,7 @@ import RightContent from '@/components/RightContent';
 import Footer from '@/components/Footer';
 import { BookOutlined, LinkOutlined } from '@ant-design/icons';
 import { currentUser as queryCurrentUser } from './services/ant-design-pro/api';
+import { pagesMockInterceptor } from './utils/mockIntercepter';
 
 const isDev = process.env.NODE_ENV === 'development';
 const loginPath = '/user/login';
@@ -95,6 +96,7 @@ export const request = {
 
     throw error;
   },
+  requestInterceptors: !isDev ? [pagesMockInterceptor] : [],
 }; // ProLayout 支持的api https://procomponents.ant.design/components/layout
 
 export const layout = ({ initialState }) => {

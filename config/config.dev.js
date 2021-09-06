@@ -12,6 +12,5 @@ export default defineConfig({
     babelPlugins: [],
     babelOptions: {},
   },
-  // enable multitabs plugin
-  multitabs: {},
+  mfsu: false,
 });

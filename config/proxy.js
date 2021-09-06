@@ -27,4 +27,10 @@ export default {
       },
     },
   },
+  pages: {
+    '/api/': {
+      target: 'https://proapi.azurewebsites.net',
+      changeOrigin: true,
+    }
+  },
 };
